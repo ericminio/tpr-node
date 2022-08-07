@@ -19,6 +19,8 @@ function revert() {
     echo "tcr -> revert"
     clean=$(git status | grep "nothing to commit" | wc -l)
     if [ $clean = 1 ]; then
+        echo "discarding commit:"
+        git show HEAD        
         git reset --hard HEAD~1
     else
         git reset --hard
