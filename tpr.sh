@@ -10,7 +10,7 @@ function rebase() {
     if [ $failed = 1 ]; then
         echo "CONFLICT"
         git rebase --abort
-        echo "discarding following commit:"
+        echo "discarding commit:"
         git show HEAD
         git reset --hard HEAD~1
         git pull
