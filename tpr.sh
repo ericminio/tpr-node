@@ -6,8 +6,9 @@ function push() {
 }
 function rebase() {
     echo "tpr -> rebase"
-    failed=$(git pull --rebase | grep CONFLICT | tail -n 1 | wc -l)
-    if [ $failed = 1 ]; then
+    git pull --rebase 
+    conflict=$(git status | grep "both modified" | tail -n 1 | wc -l)
+    if [ $conflict = 1 ]; then
         echo "CONFLICT"
         git rebase --abort
         echo "discarding commit:"
@@ -21,5 +22,5 @@ echo "tpr <- $1"
 
 ./tcr.sh
 
-cd $TCR_REPO
+cd $TTT_REPO
 push || rebase

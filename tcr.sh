@@ -12,7 +12,7 @@ function commit() {
         return 0
     else
         git add .
-        git commit -m tcr
+        git commit -m ttt
     fi
 }
 function revert() {
@@ -27,6 +27,6 @@ function revert() {
     fi
 }
 
-cd $TCR_REPO
+cd $TTT_REPO
 
 test && commit || revert

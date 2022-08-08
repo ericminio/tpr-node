@@ -1,3 +1,3 @@
 #!/bin/bash
 
-env | grep TCR
+env | grep TTT
