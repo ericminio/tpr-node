@@ -10,4 +10,4 @@ nvm use
 cd $DIR
 
 ./tpr.sh
-fswatch -r $TTT_FOLDER | xargs -n1 ./tpr.sh
+fswatch -r $TTT_FOLDER | xargs -n1 ./maybe.sh
