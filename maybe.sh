@@ -10,7 +10,7 @@ function run() {
 cd $TTT_REPO
 clean=$(git status | grep "nothing to commit" | wc -l)
 
-if [ $clean == 0 ]; then
+if [ $clean -eq 0 ]; then
     run
 else
     if [ -f $TTT_FOLDER/.ptr-push-rejected-rebase-complete ]; then

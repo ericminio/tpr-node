@@ -1,10 +1,13 @@
 ## TTT
 
-TDD: Test-Driven Development
+- TDD: Test-Driven Development
+- TCR: test && commit || revert
+- TPR: tcr && push || rebase
 
-TTT: test && commit || revert
+### Rules of the game
 
-TPR: tcr && push || rebase
+- red test is forbidden -> expect reset on red test
+- conflict is forbidden -> expect reset HEAD~1 && pull on conflict
 
 ### Usage
 
