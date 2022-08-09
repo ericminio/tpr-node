@@ -7,7 +7,7 @@ function test() {
 function commit() {
     echo "tcr -> commit"
     clean=$(git status | grep "nothing to commit" | wc -l)
-    if [ $clean = 1 ]; then
+    if [ $clean == 1 ]; then
         echo "nothing to commit"
         return 0
     else
@@ -18,7 +18,7 @@ function commit() {
 function revert() {
     echo "tcr -> revert"
     clean=$(git status | grep "nothing to commit" | wc -l)
-    if [ $clean = 1 ]; then
+    if [ $clean == 1 ]; then
         echo "discarding commit:"
         git show HEAD        
         git reset --hard HEAD~1
