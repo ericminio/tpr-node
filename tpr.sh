@@ -1,6 +1,8 @@
 #!/bin/bash
 
 source ./dir.sh
+source ./tcr.sh
+
 DIR=$(current_dir ${BASH_SOURCE[0]})
 
 function push() {
@@ -12,7 +14,6 @@ function rebase() {
     git pull --rebase 
     conflict=$(git status | grep "both modified" | tail -n 1 | wc -l)
     if [ $conflict = 1 ]; then
-        touch $DIR/conflict
         git rebase --abort
         echo "discarding commit:"
         git show HEAD
@@ -21,7 +22,7 @@ function rebase() {
     fi
 }
 
-./tcr.sh
-
-cd $TTT_REPO
-push || rebase
+function tpr() {
+    cd $TTT_REPO    
+    tcr && push || rebase
+}

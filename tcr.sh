@@ -27,6 +27,7 @@ function revert() {
     fi
 }
 
-cd $TTT_REPO
-
-test && commit || revert
+function tcr() {
+    cd $TTT_REPO
+    test && commit || revert
+}
