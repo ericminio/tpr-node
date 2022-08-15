@@ -20,3 +20,20 @@ function test_commit_on_green {
 
     assertequals $committed 1
 }
+
+function test_revert_on_red {
+    cd ../will-fail
+    rm -rf .git
+    git init
+    npm install
+    git add .
+    git status
+    git commit -m init
+    echo "syntax error" >> sut.spec.js
+    TTT_REPO="$DIR/will-fail"
+    tcr
+    cat sut.spec.js
+    modification=$(cat sut.spec.js | grep "syntax error" | tail -n 1 | wc -l)
+
+    assertequals $modification 0
+}
