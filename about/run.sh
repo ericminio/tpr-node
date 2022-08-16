@@ -1,6 +1,18 @@
 #!/bin/bash
 
-clear
-source /usr/local/opt/nvm/nvm.sh
-nvm use
-./support/test.sh ./tcr.sh
+function go {
+    clear
+    source /usr/local/opt/nvm/nvm.sh
+    nvm use
+    ./support/test.sh ./tcr.sh
+}
+
+FILE=${BASH_SOURCE[0]}
+
+if [ $FILE != "./run.sh" ]; then
+    echo "run from folder about"
+    exit 1
+else
+    export ABOUT_FOLDER=$(pwd)
+    go
+fi

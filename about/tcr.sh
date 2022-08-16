@@ -1,11 +1,9 @@
 #!/bin/bash
 
-source ../dir.sh
 source ../tcr.sh
 
 function test_commit_on_green {
-    DIR=$(current_dir ${BASH_SOURCE[0]})
-    cd $DIR/will-pass
+    cd $ABOUT_FOLDER/will-pass
     rm -rf .git
     rm will-pass.spec.js
     git init
@@ -22,7 +20,7 @@ function test_commit_on_green {
 }
 
 function test_revert_on_red {
-    cd ../will-fail
+    cd $ABOUT_FOLDER/will-fail
     rm -rf .git
     git init
     npm install
