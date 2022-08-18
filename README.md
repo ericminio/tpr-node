@@ -6,14 +6,15 @@
 
 ### Rules of the game
 
-- red test is forbidden -> expect reset on red test
-- conflict is forbidden -> expect reset HEAD~1 && pull on conflict
+- red test is forbidden -> `git reset --hard HEAD` on red test
+- conflict is forbidden -> `git reset --hard HEAD~1 && git pull` on rebase conflict
 
 ### Usage
 
 ```
 export TTT_FOLDER=/Users/eric/dev/katas/prime-factors
 export TTT_REPO=/Users/eric/dev/katas
+export TTT_RUN=(TDD | TCR | TPR)
 
 ./watch.sh
 ```

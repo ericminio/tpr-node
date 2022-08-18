@@ -1,9 +1,5 @@
 #!/bin/bash
 
-function test() {
-    echo "tcr -> test"
-    npm test    
-}
 function commit() {
     echo "tcr -> commit"
     clean=$(git status | grep "nothing to commit" | wc -l)
