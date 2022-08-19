@@ -18,3 +18,8 @@ export TTT_RUN=(TDD | TCR | TPR)
 
 ./watch.sh
 ```
+
+update your `.gitignore` with
+```
+.tpr-checksum
+```

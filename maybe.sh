@@ -1,8 +1,17 @@
 #!/bin/bash
 
+source ./checksum.sh
 source ./tdd.sh
 source ./tcr.sh
 source ./tpr.sh
+
+if [ $(hasChecksumChanged) -eq 0 ]; then
+    echo "$TTT_RUN -> no change -> exit"
+    cleanChecksums
+    checkpoint
+    exit 0
+fi
+cleanChecksums
 
 function run() {
     rm $TTT_FOLDER/.tpr-*
@@ -16,7 +25,7 @@ function run() {
         *) 
             tdd
             ;;
-    esac    
+    esac
 }
 
 cd $TTT_REPO
@@ -29,7 +38,7 @@ else
         run
     else
         echo "$TTT_RUN -> exit"
-        exit 0
     fi
 fi
 
+checkpoint
