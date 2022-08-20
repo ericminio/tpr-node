@@ -2,14 +2,17 @@
 clear
 ./check-env.sh
 
-source ./checksum.sh
-source ./dir.sh
-source ./tpr.sh
+source ./maybe-helper.sh
+
+function current_dir {
+    echo $( cd "$( dirname "$1" )" >/dev/null 2>&1 && pwd )    
+}
 
 DIR=$(current_dir ${BASH_SOURCE[0]})
 
-source /usr/local/opt/nvm/nvm.sh
 cd $TTT_REPO
+clearControlFiles
+source /usr/local/opt/nvm/nvm.sh
 nvm use
 git pull
 git status

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function test() {
-    echo "tdd -> test"
+    echo "TDD -> test"
     npm test    
 }
 function tdd() {

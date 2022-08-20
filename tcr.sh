@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function commit() {
-    echo "tcr -> commit"
+    echo "TCR -> commit"
     clean=$(git status | grep "nothing to commit" | wc -l)
     if [ $clean -eq 1 ]; then
         echo "nothing to commit"
@@ -12,7 +12,7 @@ function commit() {
     fi
 }
 function revert() {
-    echo "tcr -> revert"
+    echo "TCR -> revert"
     clean=$(git status | grep "nothing to commit" | wc -l)
     if [ $clean -eq 1 ]; then
         echo "discarding commit:"

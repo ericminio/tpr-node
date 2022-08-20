@@ -21,5 +21,5 @@ export TTT_RUN=(TDD | TCR | TPR)
 
 update your `.gitignore` with
 ```
-.tpr-checksum
+.tpr-*
 ```
