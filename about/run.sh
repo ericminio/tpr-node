@@ -5,6 +5,7 @@ function go {
     source /usr/local/opt/nvm/nvm.sh
     nvm use
     ./support/test.sh ./tcr.sh
+    ./support/test.sh ./tpr.sh
 }
 
 FILE=${BASH_SOURCE[0]}
