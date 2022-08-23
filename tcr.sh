@@ -21,6 +21,7 @@ function revert() {
     else
         git reset --hard
     fi
+    return 1
 }
 
 function tcr() {
