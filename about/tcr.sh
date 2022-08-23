@@ -14,9 +14,9 @@ function test_commit_on_green {
 }
 
 function test_revert_on_red {
-    cd $ABOUT_FOLDER/will-fail
+    cd $ABOUT_FOLDER/will-revert
     ./go.sh
-    TTT_REPO="$ABOUT_FOLDER/will-fail"
+    TTT_REPO="$ABOUT_FOLDER/will-revert"
     tcr
     cat sut.spec.js
     modification=$(cat sut.spec.js | grep "syntax error" | tail -n 1 | wc -l)
