@@ -1,10 +1,10 @@
 #!/bin/bash
 
 rm -rf .git
-rm will-pass.spec.js
+rm will-commit.spec.js
 git init
 npm install
 git add .
 git status
 git commit -m init
-touch will-pass.spec.js
+touch will-commit.spec.js
