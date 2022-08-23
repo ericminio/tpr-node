@@ -40,3 +40,13 @@ function test_pull_on_red {
 
     assertequals $pulled 1
 }
+
+function test_only_rebase_on_red {
+    $ABOUT_FOLDER/will-rebase/go.sh
+    TTT_REPO="$ABOUT_FOLDER/will-rebase/clone"
+    tpr
+    git log
+    count=$(git log | grep Author: | wc -l)
+
+    assertequals $count 3
+}
