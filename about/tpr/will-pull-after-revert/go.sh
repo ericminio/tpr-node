@@ -2,7 +2,7 @@
 
 rm -rf .git
 rm will-pull.spec.js
-rm -rf $ABOUT_FOLDER/tpr/will-pull/clone
+rm -rf $ABOUT_FOLDER/tpr/will-pull-after-revert/clone
 git init
 npm install
 touch will-pull.spec.js
