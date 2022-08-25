@@ -44,7 +44,7 @@ function revertHappened() {
     fi
 }
 
-function shouldRerun() {
+function shouldRun() {
     if [ $(revertHappened) = "yes" ]; then
         echo "no"
         return 0
