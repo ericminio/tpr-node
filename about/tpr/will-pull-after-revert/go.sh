@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd $ABOUT_FOLDER/tpr/will-pull-after-revert
 rm -rf .git
 rm will-pull.spec.js
 rm -rf $ABOUT_FOLDER/tpr/will-pull-after-revert/clone

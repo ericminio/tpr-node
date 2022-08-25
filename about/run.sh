@@ -7,6 +7,7 @@ function go {
     ./support/test.sh ./tcr/tcr.sh
     ./support/test.sh ./tpr/tpr.sh
     ./support/test.sh ./rerun/tcr.sh
+    ./support/test.sh ./rerun/tpr.sh
 }
 
 FILE=${BASH_SOURCE[0]}
