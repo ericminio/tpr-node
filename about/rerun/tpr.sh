@@ -22,3 +22,12 @@ function test_does_rerun_after_rebase {
 
     assertequals $should "yes"
 }
+
+function test_does_not_rerun_after_prevented_conflict {
+    $ABOUT_FOLDER/tpr/will-prevent-conflict/go.sh
+    TTT_REPO="$ABOUT_FOLDER/tpr/will-prevent-conflict/clone"
+    tpr
+    should=$(shouldRerun)
+
+    assertequals $should "no"
+}
