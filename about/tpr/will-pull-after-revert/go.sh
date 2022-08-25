@@ -15,7 +15,7 @@ git commit -am exploration
 git checkout -b standby
 pwd
 git branch
-cd $ABOUT_FOLDER/tpr/will-pull/clone
+cd $ABOUT_FOLDER/tpr/will-pull-after-revert/clone
 pwd
 git branch
 npm install
