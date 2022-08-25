@@ -50,3 +50,13 @@ function test_rebase_on_red {
 
     assertequals $count 3
 }
+
+function test_discard_commit_and_pull_on_conflict {
+    $ABOUT_FOLDER/tpr/will-prevent-conflict/go.sh
+    TTT_REPO="$ABOUT_FOLDER/tpr/will-prevent-conflict/clone"
+    tpr
+    git log
+    pulled=$(git log -n 1 | grep challenge | wc -l)
+
+    assertequals $pulled 1
+}
