@@ -36,6 +36,22 @@ function rebaseConflicted() {
     fi
 }
 
+function revertHappened() {
+    if [ -f $TTT_REPO/.tpr-reverted ]; then
+        echo "yes"
+    else
+        echo "no"
+    fi
+}
+
 function shouldRerun() {
+    if [ $(revertHappened) = "yes" ]; then
+        echo "no"
+        return 0
+    fi
+    if [ $(rebaseSuccessed) = "yes" ]; then
+        echo "yes"
+        return 0
+    fi
     echo "no"
 }

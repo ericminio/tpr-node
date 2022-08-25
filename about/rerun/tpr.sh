@@ -13,3 +13,12 @@ function test_does_not_rerun_after_revert_and_pull {
 
     assertequals $should "no"
 }
+
+function test_does_rerun_after_rebase {
+    $ABOUT_FOLDER/tpr/will-rebase/go.sh
+    TTT_REPO="$ABOUT_FOLDER/tpr/will-rebase/clone"
+    tpr
+    should=$(shouldRerun)
+
+    assertequals $should "yes"
+}

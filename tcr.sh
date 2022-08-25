@@ -21,6 +21,7 @@ function revert() {
     else
         git reset --hard
     fi
+    touch $TTT_REPO/.tpr-reverted
     return 1
 }
 
