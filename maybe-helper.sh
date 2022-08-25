@@ -6,7 +6,7 @@ function clearControlFiles() {
 }
 
 function checksum() {
-    git diff
+    git status && git diff
 }
 
 function checkpoint() {
@@ -50,6 +50,10 @@ function shouldRun() {
         return 0
     fi
     if [ $(rebaseSuccessed) = "yes" ]; then
+        echo "yes"
+        return 0
+    fi
+    if [ $(hasChecksumChanged) -ne 0 ]; then
         echo "yes"
         return 0
     fi

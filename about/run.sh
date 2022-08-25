@@ -8,6 +8,7 @@ function go {
     ./support/test.sh ./tpr/tpr.sh
     ./support/test.sh ./rerun/tcr.sh
     ./support/test.sh ./rerun/tpr.sh
+    ./support/test.sh ./rerun/maybe.sh
 }
 
 FILE=${BASH_SOURCE[0]}
