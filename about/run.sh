@@ -4,8 +4,8 @@ function go {
     clear
     source /usr/local/opt/nvm/nvm.sh
     nvm use
-    ./support/test.sh ./tcr.sh
-    ./support/test.sh ./tpr.sh
+    ./support/test.sh ./tcr/tcr.sh
+    ./support/test.sh ./tpr/tpr.sh
 }
 
 FILE=${BASH_SOURCE[0]}

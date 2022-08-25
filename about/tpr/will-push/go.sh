@@ -2,7 +2,7 @@
 
 rm -rf .git
 rm will-push.spec.js
-rm -rf $ABOUT_FOLDER/will-push/clone
+rm -rf $ABOUT_FOLDER/tpr/will-push/clone
 git init
 npm install
 touch will-push.spec.js
@@ -13,7 +13,7 @@ git clone . clone
 git checkout -b standby
 pwd
 git branch
-cd $ABOUT_FOLDER/will-push/clone
+cd $ABOUT_FOLDER/tpr/will-push/clone
 pwd
 git branch
 npm install

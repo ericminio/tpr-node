@@ -1,10 +1,10 @@
 #!/bin/bash
 
-cd $ABOUT_FOLDER/will-rebase
+cd $ABOUT_FOLDER/tpr/will-rebase
 rm -rf .git
 rm sut.spec.js
 rm another-sut.spec.js
-rm -rf $ABOUT_FOLDER/will-rebase/clone
+rm -rf $ABOUT_FOLDER/tpr/will-rebase/clone
 git init
 npm install
 touch sut.spec.js
@@ -19,7 +19,7 @@ git commit -m another
 git checkout -b standby
 pwd
 git branch
-cd $ABOUT_FOLDER/will-rebase/clone
+cd $ABOUT_FOLDER/tpr/will-rebase/clone
 pwd
 git branch
 npm install
