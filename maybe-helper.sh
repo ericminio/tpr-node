@@ -49,6 +49,10 @@ function shouldRun() {
         echo "no"
         return 0
     fi
+    if [ $(rebaseConflicted) = "yes" ]; then
+        echo "no"
+        return 0
+    fi
     if [ $(rebaseSuccessed) = "yes" ]; then
         echo "yes"
         return 0
