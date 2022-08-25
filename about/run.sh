@@ -6,6 +6,7 @@ function go {
     nvm use
     ./support/test.sh ./tcr/tcr.sh
     ./support/test.sh ./tpr/tpr.sh
+    ./support/test.sh ./rerun/tcr.sh
 }
 
 FILE=${BASH_SOURCE[0]}

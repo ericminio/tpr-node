@@ -35,3 +35,7 @@ function rebaseConflicted() {
         echo "no"
     fi
 }
+
+function shouldRerun() {
+    echo "no"
+}
