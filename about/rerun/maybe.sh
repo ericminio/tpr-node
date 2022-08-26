@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ../maybe-helper.sh
+source ../dist/maybe-helper.sh
 
 function cleanPlayground() {
     cd $ABOUT_FOLDER/rerun/maybe-playground

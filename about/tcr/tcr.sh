@@ -1,7 +1,7 @@
 #!/bin/bash
 
-source ../tdd.sh
-source ../tcr.sh
+source ../dist/tdd.sh
+source ../dist/tcr.sh
 
 function test_commit_on_green {
     cd $ABOUT_FOLDER/tcr/will-commit

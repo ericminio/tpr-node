@@ -1,9 +1,9 @@
 #!/bin/bash
 
-source ../tdd.sh
-source ../tcr.sh
-source ../tpr.sh
-source ../maybe-helper.sh
+source ../dist/tdd.sh
+source ../dist/tcr.sh
+source ../dist/tpr.sh
+source ../dist/maybe-helper.sh
 
 function test_does_not_run_after_revert_and_pull {
     $ABOUT_FOLDER/tpr/will-pull-after-revert/go.sh

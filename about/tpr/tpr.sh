@@ -1,8 +1,8 @@
 #!/bin/bash
 
-source ../tdd.sh
-source ../tcr.sh
-source ../tpr.sh
+source ../dist/tdd.sh
+source ../dist/tcr.sh
+source ../dist/tpr.sh
 
 function test_push_on_green {
     cd $ABOUT_FOLDER/tpr/will-push
