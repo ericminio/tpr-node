@@ -11,15 +11,16 @@
 
 ### Usage
 
+update your `.gitignore` with
+```
+.tpr-*
+```
+
 ```
 export TTT_FOLDER=/Users/eric/dev/katas/prime-factors
 export TTT_REPO=/Users/eric/dev/katas
 export TTT_RUN=(TDD | TCR | TPR)
 
+cd dist
 ./watch.sh
-```
-
-update your `.gitignore` with
-```
-.tpr-*
 ```
