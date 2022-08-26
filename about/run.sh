@@ -4,11 +4,18 @@ function go {
     clear
     source /usr/local/opt/nvm/nvm.sh
     nvm use
-    ./support/test.sh ./tcr/tcr.sh
-    ./support/test.sh ./tpr/tpr.sh
-    ./support/test.sh ./rerun/tcr.sh
-    ./support/test.sh ./rerun/tpr.sh
-    ./support/test.sh ./rerun/maybe.sh
+    testing ./tcr/tcr.sh
+    testing ./tpr/tpr.sh
+    testing ./rerun/tcr.sh
+    testing ./rerun/tpr.sh
+    testing ./rerun/maybe.sh
+}
+
+function testing {
+    ./support/test.sh $1
+    if (( $? != 0 )); then
+        exit 1
+    fi
 }
 
 FILE=${BASH_SOURCE[0]}
