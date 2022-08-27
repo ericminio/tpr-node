@@ -24,3 +24,17 @@ export TTT_RUN=(TDD | TCR | TPR)
 cd dist
 ./watch.sh
 ```
+
+### Tip
+
+update your shell start script
+```
+function ttt {
+    export TTT_REPO=$(pwd)
+    export TTT_FOLDER=$(pwd)/$1
+    export TTT_RUN=$2
+    env | grep TTT
+
+    cd ~/dev/tpr/dist
+}
+```
