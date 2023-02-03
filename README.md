@@ -29,12 +29,14 @@ cd dist
 
 update your shell start script
 ```
+export TTT_DIST=~/dev/tpr/dist
 function ttt {
     export TTT_REPO=$(pwd)
     export TTT_FOLDER=$(pwd)/$1
     export TTT_RUN=$2
     env | grep TTT
 
-    cd ~/dev/tpr/dist
+    cd $TTT_DIST
+    ./watch.sh
 }
 ```

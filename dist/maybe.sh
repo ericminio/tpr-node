@@ -27,3 +27,4 @@ else
     clearControlFiles
     checkpoint
 fi
+date +%R

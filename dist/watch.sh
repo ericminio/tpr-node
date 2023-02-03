@@ -12,7 +12,7 @@ DIR=$(current_dir ${BASH_SOURCE[0]})
 
 cd $TTT_REPO
 clearControlFiles
-source /usr/local/opt/nvm/nvm.sh
+source ~/.nvm/nvm.sh
 nvm use
 git pull
 git status

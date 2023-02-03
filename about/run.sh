@@ -2,7 +2,7 @@
 
 function go {
     clear
-    source /usr/local/opt/nvm/nvm.sh
+    source ~/.nvm/nvm.sh
     nvm use
     testing ./tcr/tcr.sh
     testing ./tpr/tpr.sh
