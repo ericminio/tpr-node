@@ -20,4 +20,4 @@ cd $ABOUT_FOLDER/tpr/will-prevent-conflict/clone
 pwd
 git branch
 npm install
-echo "import { strict as assert } from 'node:assert';" > sut.test.js
+echo "import { describe, it } from 'node:test';" > sut.test.js

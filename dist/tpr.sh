@@ -7,6 +7,7 @@ function push() {
 function rebase() {
     echo "TPR -> rebase"
     git pull --rebase 
+    git status
     conflict=$(git status | grep "both modified" | tail -n 1 | wc -l)
     if [ $conflict -eq 1 ]; then
         git rebase --abort
