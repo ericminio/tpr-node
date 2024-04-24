@@ -2,18 +2,18 @@
 
 cd $ABOUT_FOLDER/tpr/will-rebase
 rm -rf .git
-rm sut.spec.js
-rm another-sut.spec.js
+rm sut.test.js
+rm another-sut.test.js
 rm -rf $ABOUT_FOLDER/tpr/will-rebase/clone
 git init -b main
 npm install
-touch sut.spec.js
+touch sut.test.js
 git add .
 git status
 git commit -m sut
 git clone . clone
-touch another-sut.spec.js
-git add another-sut.spec.js
+touch another-sut.test.js
+git add another-sut.test.js
 git status
 git commit -m another
 git checkout -b standby
@@ -23,4 +23,4 @@ cd $ABOUT_FOLDER/tpr/will-rebase/clone
 pwd
 git branch
 npm install
-echo "const { expect } = require('chai');" > sut.spec.js
+echo "import { strict as assert } from 'node:assert';" > sut.test.js
