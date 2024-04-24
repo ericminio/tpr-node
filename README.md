@@ -1,3 +1,5 @@
+[![tests](https://github.com/ericminio/yop-tpr/actions/workflows/tests.yml/badge.svg)](https://github.com/ericminio/yop-tpr/actions/workflows/tests.yml)
+
 ## TTT
 
 - TDD: Test-Driven Development
