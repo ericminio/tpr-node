@@ -4,7 +4,7 @@ cd $ABOUT_FOLDER/tpr/will-prevent-conflict
 rm -rf .git
 rm sut.spec.js
 rm -rf $ABOUT_FOLDER/tpr/will-prevent-conflict/clone
-git init
+git init -b main
 npm install
 touch sut.spec.js
 git add .

@@ -2,7 +2,7 @@
 
 rm -rf .git
 rm will-commit.spec.js
-git init
+git init -b main
 npm install
 git add .
 git status

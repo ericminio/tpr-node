@@ -5,7 +5,7 @@ rm -rf .git
 rm sut.spec.js
 rm another-sut.spec.js
 rm -rf $ABOUT_FOLDER/tpr/will-rebase/clone
-git init
+git init -b main
 npm install
 touch sut.spec.js
 git add .

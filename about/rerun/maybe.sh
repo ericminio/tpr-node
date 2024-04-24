@@ -6,7 +6,7 @@ function cleanPlayground() {
     cd $ABOUT_FOLDER/rerun/maybe-playground
     rm sut.spec.js
     rm -rf .git
-    git init
+    git init -b main
     git add .
     git commit -m start
 }

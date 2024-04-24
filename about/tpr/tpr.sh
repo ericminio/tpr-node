@@ -11,7 +11,7 @@ function test_push_on_green {
     tpr
     cd $ABOUT_FOLDER/tpr/will-push
     pwd
-    git checkout master
+    git checkout main
     git branch
     git log
     pushed=$(git log -n 1 | grep ttt | tail -n 1 | wc -l)

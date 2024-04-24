@@ -2,7 +2,7 @@
 
 cd $ABOUT_FOLDER/tcr/will-revert
 rm -rf .git
-git init
+git init -b main
 npm install
 git add .
 git status
