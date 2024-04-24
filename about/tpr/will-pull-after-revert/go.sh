@@ -2,16 +2,16 @@
 
 cd $ABOUT_FOLDER/tpr/will-pull-after-revert
 rm -rf .git
-rm will-pull.spec.js
+rm will-pull.test.js
 rm -rf $ABOUT_FOLDER/tpr/will-pull-after-revert/clone
 git init -b main
 npm install
-touch will-pull.spec.js
+touch will-pull.test.js
 git add .
 git status
 git commit -m init
 git clone . clone
-echo "const { expect } = require('chai');" > will-pull.spec.js
+echo "import { strict as assert } from 'node:assert';" > will-pull.test.js
 git commit -am exploration
 git checkout -b standby
 pwd
@@ -20,4 +20,4 @@ cd $ABOUT_FOLDER/tpr/will-pull-after-revert/clone
 pwd
 git branch
 npm install
-echo "const { expect } = require('unknown');" > will-pull.spec.js
+echo "import { strict as assert } from 'unknown';" > will-pull.test.js
