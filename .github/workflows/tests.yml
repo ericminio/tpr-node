@@ -13,11 +13,10 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
-      - name: git config
+      - name: tests
         run: |
           git config user.email "me@example.com"
           git config user.name "Me"
-      - name: tests
-        run: |
           cd about
+          nvm use
           ./run.sh
