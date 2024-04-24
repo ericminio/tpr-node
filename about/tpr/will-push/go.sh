@@ -1,11 +1,11 @@
 #!/bin/bash
 
 rm -rf .git
-rm will-push.spec.js
+rm will-push.test.js
 rm -rf $ABOUT_FOLDER/tpr/will-push/clone
 git init -b main
 npm install
-touch will-push.spec.js
+touch will-push.test.js
 git add .
 git status
 git commit -m init
@@ -17,4 +17,4 @@ cd $ABOUT_FOLDER/tpr/will-push/clone
 pwd
 git branch
 npm install
-echo "const { expect } = require('chai');" > will-push.spec.js
+echo "import { strict as assert } from 'node:assert';" > will-push.test.js
