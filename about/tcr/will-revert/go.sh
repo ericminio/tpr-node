@@ -7,4 +7,4 @@ npm install
 git add .
 git status
 git commit -m init
-echo "syntax error" >> sut.spec.js
+echo "syntax error" >> sut.test.js

@@ -18,8 +18,8 @@ function test_revert_on_red {
     ./go.sh
     TTT_REPO="$ABOUT_FOLDER/tcr/will-revert"
     tcr
-    cat sut.spec.js
-    modification=$(cat sut.spec.js | grep "syntax error" | tail -n 1 | wc -l)
+    cat sut.test.js
+    modification=$(cat sut.test.js | grep "syntax error" | tail -n 1 | wc -l)
 
     assertequals $modification 0
 }
