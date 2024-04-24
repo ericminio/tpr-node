@@ -4,7 +4,7 @@ source ../dist/maybe-helper.sh
 
 function cleanPlayground() {
     cd $ABOUT_FOLDER/rerun/maybe-playground
-    rm sut.spec.js
+    rm sut.test.js
     rm -rf .git
     git init -b main
     git add .
@@ -16,7 +16,7 @@ function test_when_something_changed {
     TTT_REPO="$ABOUT_FOLDER/rerun/maybe-playground"
     checkpoint
     cd $ABOUT_FOLDER/rerun/maybe-playground
-    touch sut.spec.js
+    touch sut.test.js
     should=$(shouldRun)
 
     assertequals $should "yes"
