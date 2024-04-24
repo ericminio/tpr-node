@@ -1,0 +1,19 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  test:
+    name: run tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v2
+      - name: tests
+        run: |
+          cd about
+          ./run.sh
