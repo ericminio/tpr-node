@@ -1,4 +1,4 @@
-name: CI
+name: tests
 
 on:
   push:
@@ -13,6 +13,10 @@ jobs:
     steps:
       - name: checkout code
         uses: actions/checkout@v2
+      - name: git config
+        run: |
+          git config user.email "me@example.com"
+          git config user.name "Me"
       - name: tests
         run: |
           cd about
