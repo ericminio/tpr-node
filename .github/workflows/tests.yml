@@ -19,7 +19,7 @@ jobs:
           node-version-file: "./about/.nvmrc"
       - name: tests
         run: |
-          git config user.email "me@example.com"
-          git config user.name "Me"
+          git config --global user.email "me@example.com"
+          git config --global user.name "Me"
           cd about
           ./run.sh
