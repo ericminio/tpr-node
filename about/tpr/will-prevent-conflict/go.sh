@@ -2,16 +2,16 @@
 
 cd $ABOUT_FOLDER/tpr/will-prevent-conflict
 rm -rf .git
-rm sut.spec.js
+rm sut.test.js
 rm -rf $ABOUT_FOLDER/tpr/will-prevent-conflict/clone
 git init -b main
 npm install
-touch sut.spec.js
+touch sut.test.js
 git add .
 git status
 git commit -m init
 git clone . clone
-echo "const { expect } = require('chai');" > sut.spec.js
+echo "import { strict as assert } from 'node:assert';" > sut.test.js
 git commit -am challenge
 git checkout -b standby
 pwd
@@ -20,4 +20,4 @@ cd $ABOUT_FOLDER/tpr/will-prevent-conflict/clone
 pwd
 git branch
 npm install
-echo "const chai = require('chai');" > sut.spec.js
+echo "import { strict as assert } from 'node:assert';" > sut.test.js
